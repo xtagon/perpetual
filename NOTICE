@@ -1,0 +1,60 @@
+LEGAL NOTICE INFORMATION
+------------------------
+
+All the files in this distribution are copyright to the terms below.
+
+== lib/perpetual.ex
+== lib/perpetual/server.ex
+== test/perpetual_test.exs
+
+These files are derivative works based on the following files from Elixir's source code:
+
+- lib/elixir/lib/agent.ex
+- lib/elixir/lib/agent/server.ex
+- lib/elixir/test/elixir/agent_test.exs
+
+The original source is available here: https://github.com/elixir-lang/elixir/tree/v1.11.1/lib/elixir/lib
+
+Notable changes:
+
+- Renamed `Agent` to `Perpetual` (new namespace, not to conflict with Agent)
+- Extended the original implementation beyond Agent's original functionality
+  (for example, specifying a "next" function instead of just an initial
+  function, and using GenServer timeouts to iterate automatically)
+- Extended the original tests to fit this new implementation's behavior
+- Modified the documentation slightly to fit this new implementation's API,
+  although most of the documentation is the same as the original documentation
+  wherever the behavior stayed the same.
+
+The copyright and license for the original sources upon which this derivative
+work is based are:
+
+Copyright 2012 Plataformatec
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+== All other files and significant changes
+
+Copyright 2020 Justin Workman
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

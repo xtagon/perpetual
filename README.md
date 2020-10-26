@@ -21,3 +21,9 @@ def deps do
   ]
 end
 ```
+
+## License
+
+Perpetual's source code is released under Apache License 2.0.
+
+Check [NOTICE](NOTICE) and [LICENSE](LICENSE) files for more information.
