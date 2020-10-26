@@ -16,22 +16,22 @@ defmodule Perpetual do
 
   For example, the following server implements an infinite counter:
 
-    defmodule Counter do
-      use Perpetual
+      defmodule Counter do
+        use Perpetual
 
-      def start_link(initial_count) do
-        args = [init_fun: fn -> initial_count end, next_fun: &(&1 + 1)]
-        Perpetual.start_link(args, name: __MODULE__)
-      end
+        def start_link(initial_count) do
+          args = [init_fun: fn -> initial_count end, next_fun: &(&1 + 1)]
+          Perpetual.start_link(args, name: __MODULE__)
+        end
 
-      def get_count do
-        Perpetual.get(__MODULE__, &(&1))
-      end
+        def get_count do
+          Perpetual.get(__MODULE__, &(&1))
+        end
 
-      def stop do
-        Perpetual.stop(__MODULE__)
+        def stop do
+          Perpetual.stop(__MODULE__)
+        end
       end
-    end
 
   Usage would be:
 
@@ -64,7 +64,7 @@ defmodule Perpetual do
   A `Perpetual` server is most commonly started under a supervision tree.
   When we invoke `use Perpetual`, it automatically defines a `child_spec/1`
   function that allows us to start the server directly under a supervisor.
-  To start a server under a supervisor with an initial counter of 0,
+  To start the Counter example under a supervisor with an initial counter of 0,
   one may do:
 
       children = [
