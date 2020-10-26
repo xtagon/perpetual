@@ -4,7 +4,7 @@ Perpetual is a simple abstraction around repeatedly iterating state in Elixir.
 
 It is similar to Elixir's `Agent` module in that it can share or store state
 that must be accessed from different processes or by the same process at
-different points in time, and in additiion to that, `Perpetual` lets you
+different points in time, and in addition to that, `Perpetual` lets you
 define a function for repeatedly updating the stored state for as long as the
 process is kept running.
 
