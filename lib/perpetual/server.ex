@@ -49,6 +49,14 @@ defmodule Perpetual.Server do
     {:reply, :ok, next_state, @timeout}
   end
 
+  def handle_call({:swarm, :begin_handoff}, _from, state) do
+    {:reply, {:resume, state}, state, @timeout}
+  end
+
+  def handle_call({:swarm, :end_handoff, incoming_state}, _from, _state) do
+    {:noreply, incoming_state, @timeout}
+  end
+
   def handle_cast({:cast, fun}, state) do
     next_value = run(fun, [state.value])
     next_state = %{state | value: next_value}
